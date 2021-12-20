@@ -1,0 +1,39 @@
+.#{$variable-prefix}shinetrough{
+  position: relative;
+  &-canvas{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none; /* allow user interaction */
+    border-radius: inherit; /* inherit from parent (rounded buttons etc) */
+  }
+  &-candle{
+    position: absolute;
+    background: radial-gradient(circle closest-side, rgba(255, 255, 255, .5), transparent);
+    backface-visibility: hidden;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  &-candle-anim{
+    animation: #{$variable-prefix}shinetrough-candle .6s forwards;
+  }
+  &-candle-anim-back{
+    animation: #{$variable-prefix}shinetrough-candle-back .6s forwards;
+  }
+  @keyframes #{$variable-prefix}shinetrough-candle {
+    to {
+      opacity: .35;
+    }
+  }
+  @keyframes #{$variable-prefix}shinetrough-candle-back {
+    from{
+      opacity: .35;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}

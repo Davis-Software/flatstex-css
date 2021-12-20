@@ -1,0 +1,41 @@
+.#{$variable-prefix}ripple{
+  position: relative;
+  &-inner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none; /* allow user interaction */
+    border-radius: inherit; /* inherit from parent (rounded buttons etc) */
+    transform: translateZ(0);
+    animation: #{$variable-prefix}ripple-shadow .4s forwards;
+  }
+  &-wave{
+    position: absolute;
+    background: rgba(255, 255, 255, .6);
+    backface-visibility: hidden;
+    border-radius: 50%;
+    opacity: .45;
+    transform: scale(.7);
+    animation: #{$variable-prefix}ripple 1.5s forwards;
+  }
+  @keyframes #{$variable-prefix}ripple-shadow {
+    0% {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    20% {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .3);
+    }
+    100% {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes #{$variable-prefix}ripple {
+    to {
+      opacity: 0;
+      transform: scale(24);
+    }
+  }
+}

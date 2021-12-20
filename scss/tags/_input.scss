@@ -1,0 +1,41 @@
+.#{$variable-prefix}form-input{
+  display: inline-block;
+  padding: .75rem 1rem;
+  margin: .5rem .2rem;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #{$body-color};
+  background-color: #{$dark};
+  border: 1px solid #{$gray-700};
+  border-radius: 1.5rem;
+  outline: transparent;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .1s ease-out, border-radius .15s ease-in-out, border .15s ease-in-out;
+
+  &:focus{
+    border: 1px solid #{$gray-600};
+  }
+
+  &:active,
+  &.active {
+    box-shadow: inset 0 3px 5px rgba($black, .125);
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    color: #{$gray-200};
+    pointer-events: none;
+    border: 2px solid #{$gray-900};
+    box-shadow: none;
+    opacity: .65;
+    &::-webkit-calendar-picker-indicator{
+      filter: invert(40%);
+    }
+  }
+
+  &::-webkit-calendar-picker-indicator{
+    filter: invert(80%);
+  }
+}

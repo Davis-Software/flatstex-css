@@ -1,0 +1,26 @@
+:root {
+  @each $color, $value in $colors {
+    --#{$variable-prefix}#{$color}: #{$value};
+    #{$variable-prefix}c-#{$color}{
+      color: #{$value};
+    }
+  }
+
+  @each $color, $value in $grays {
+    --#{$variable-prefix}gray-#{$color}: #{$value};
+    #{$variable-prefix}grey-#{$color}, #{$variable-prefix}gray-#{$color}{
+      color: #{$value};
+    }
+  }
+}
+
+*,
+::after,
+::before{
+  box-sizing: border-box;
+}
+
+body:not(#{$use-default-class}){
+  color: #{$body-color};
+  background-color: #{$body-bg};
+}

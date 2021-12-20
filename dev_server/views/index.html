@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flatstex showcase</title>
+    <link rel="stylesheet" href="/dist/css/flatstex.css">
+    <script src="/dist/js/flatstex.bundle.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        test
+    </div>
+
+    <h1>CSS Basic Elements</h1>
+
+    <p>The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
+
+    <hr>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <hr>
+
+    <button class="fsx-btn fsx-btn-primary">Test Button</button>
+
+    <button class="fsx-btn fsx-btn-green fsx-btn-stressed" style="height: 200px; width: 200px">Big Boy Button</button>
+
+
+    <input type="text" class="fsx-form-input">
+    <input type="time" class="fsx-form-input">
+
+    <input type="submit" class="fsx-btn fsx-btn-green fsx-btn-stressed">
+
+    <script>
+        flatstex.rippleEffect.initializeRipples({
+            selectors: ["button", ".fsx-ripple"]
+        })
+        flatstex.shinetroughEffect.initializeShinetroughs({
+            selectors: ["button"]
+        })
+    </script>
+</body>
+</html>
