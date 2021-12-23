@@ -6,7 +6,7 @@
 
 ---
 
-###Features
+### Features
 * DarkMode-only
 * Buttons
   * ripple effect
@@ -16,7 +16,7 @@
 
 ---
 
-###Installing
+### Installing
 * Download the latest css and js files from the [Releases page](./releases)
 * more info will be added soon
 
